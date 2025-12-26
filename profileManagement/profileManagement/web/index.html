@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #ffe4f2, #ffd1e0); 
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 500px;
+                margin: 50px auto;
+                background: #ffffff;
+                padding: 25px 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #d81b60; 
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 4px;
+                font-weight: bold;
+                color: #ad1457;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                padding: 8px 10px;
+                border: 1px solid #f8bbd0;
+                border-radius: 6px;
+                box-sizing: border-box;
+                font-size: 14px;
+            }
+
+            textarea {
+                min-height: 80px;
+                resize: vertical;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background: #ffeb3b;         
+                border: none;
+                border-radius: 6px;
+                color: #5d4037;               
+                font-size: 15px;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            input[type="submit"]:hover {
+                background: #fdd835;          
+            }
+
+            a.button {
+                display: block;
+                text-align: center;
+                padding: 10px;
+                background: #e1bee7;  
+                border-radius: 6px;
+                color: #4a148c;        
+                font-size: 15px;
+                font-weight: bold;
+                text-decoration: none;
+                margin-top: 15px;
+            }
+
+            a.button:hover {
+                background: #ce93d8;   
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Student Profile Form</h2>
+            <form action="AddStudentServlet" method="post">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentID">Student ID</label>
+                    <input type="text" name="studentID" id="studentID" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Program</label>
+                    <input type="text" name="program" id="program" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hobbies">Hobbies</label>
+                    <input type="text" name="hobbies" id="hobbies" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="selfIntro">Short Self Introduction</label>
+                    <textarea name="selfIntro" id="selfIntro" required></textarea>
+                </div>
+
+                <input type="submit" value="Add Student Information">
+                <a href="viewProfiles.jsp" class="button">View All Profiles</a>
+                <a href="home.html" class="button">Back to Home</a>
+            </form>
+        </div>
+    </body>
+</html>
